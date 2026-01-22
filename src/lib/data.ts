@@ -4,7 +4,7 @@ export const siteConfig = {
     name: "Sayani Das",
     role: "Web Developer & Frontend Engineer",
     description: "Passionate female web developer building modern, fast and scalable web applications.",
-    email: "sayani@example.com", // Placeholder
+    email: "dassayani1756@gmail.com",
     socials: [
         {
             name: "GitHub",
@@ -18,7 +18,7 @@ export const siteConfig = {
         },
         {
             name: "Email",
-            href: "mailto:sayani@example.com",
+            href: "mailto:dassayani1756@gmail.com",
             icon: Mail,
         },
     ],
