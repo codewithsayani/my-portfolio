@@ -18,11 +18,12 @@ async function getRepos() {
     try {
         const res = await fetch(
             "https://api.github.com/users/codewithsayani/repos?sort=updated&per_page=6",
-            { next: { revalidate: 3600 } }
+            { next: { revalidate: 0 } }
         );
         if (!res.ok) return [];
         const repos: Repo[] = await res.json();
-        return repos.filter((repo: Repo) => !repo.fork);
+        console.log("Fetched repos:", repos.map(r => r.name));
+        return repos.filter((repo: Repo) => !repo.fork && !repo.name.toLowerCase().includes("my-portfolio"));
     } catch (error) {
         return [];
     }
